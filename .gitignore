@@ -4,3 +4,5 @@ Thumbs.db
 *.log
 .claude/
 colar/*.txt
+android/build/
+android/assinatura/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nome_do_app">Cifras Alerta</string>
+    <color name="preto">#000000</color>
+
+    <style name="Tema" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/preto</item>
+        <item name="android:statusBarColor">@color/preto</item>
+        <item name="android:navigationBarColor">@color/preto</item>
+    </style>
+</resources>
