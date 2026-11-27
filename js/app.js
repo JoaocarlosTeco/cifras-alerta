@@ -106,7 +106,8 @@ const indice = musicas.map((m) => {
     tituloN: simplificar(m.titulo),
     artistaN: simplificar(m.artista || ''),
     textoN: linhasN.join(' '),
-    primeira: linhas[0] || m.artista || '',
+    // Embaixo do título: o artista; sem artista, a primeira frase que não seja anotação entre parênteses.
+    primeira: m.artista || linhas.find((l) => !/^\(.*\)$/.test(l.trim())) || '',
   };
 });
 const porSlug = new Map(indice.map((m) => [m.slug, m]));

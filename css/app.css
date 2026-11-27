@@ -1784,3 +1784,261 @@ kbd {
     --tam: 13pt !important;
   }
 }
+
+/* ---------- Refino: preto e branco mais leve ----------
+   Cinza suave no lugar dos contornos grossos, cantos iguais, barra translúcida.
+   O preto fica para o que importa: títulos, acordes, o tom e o Refrão. */
+
+.capa-folha {
+  display: none;
+}
+
+.inverter {
+  border: 0;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+/* Busca e filtros */
+.busca input {
+  height: 54px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: var(--cinza-1);
+}
+
+.busca input:focus {
+  border-color: var(--tinta);
+  background: var(--fundo);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tinta) 12%, transparent);
+}
+
+.chip {
+  border: 1px solid var(--cinza-2);
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--tinta);
+}
+
+/* Categorias: cartões cinza-claro, com o ícone num círculo preto */
+.bloco,
+.bloco:nth-child(4n + 1),
+.bloco:nth-child(4n + 4) {
+  min-height: 112px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--cinza-1);
+  color: var(--tinta);
+}
+
+.bloco svg {
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--tinta);
+  color: var(--fundo);
+  stroke-width: 1.9;
+}
+
+.bloco-num {
+  align-self: start;
+  padding-top: 4px;
+  color: var(--cinza-3);
+  font-family: var(--fonte);
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: 100%;
+}
+
+.bloco-nome {
+  font-size: 20px;
+  font-weight: 750;
+  font-stretch: 86%;
+}
+
+/* Lista */
+.lista-titulo,
+.grupo-topo {
+  border-bottom: 0;
+  padding-bottom: 2px;
+}
+
+.lista-titulo h2 {
+  font-size: 26px;
+}
+
+.itens li + li {
+  border-top-color: color-mix(in srgb, var(--cinza-2) 55%, transparent);
+}
+
+.item {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.item-titulo {
+  font-size: 19px;
+  font-stretch: 90%;
+}
+
+.item-tom {
+  min-width: 46px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--cinza-1);
+  color: var(--tinta);
+  font-size: 16px;
+}
+
+.grupo-icone {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.grupo-icone svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Tela da música */
+.voltar,
+.selos a {
+  border: 0;
+  background: var(--cinza-1);
+}
+
+.cifra {
+  border-top: 1px solid var(--cinza-2);
+}
+
+.vizinhas {
+  border-top: 1px solid var(--cinza-2);
+}
+
+/* Nome da parte: um tracinho na frente (a folha parecia um zero). */
+.secao {
+  gap: 0.5em;
+  color: var(--cinza-3);
+  font-weight: 700;
+}
+
+.secao::before {
+  width: 0.9em;
+  height: 2px;
+  border: 0;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.secao.refrao {
+  color: var(--fundo);
+}
+
+.secao.refrao::before {
+  display: none;
+}
+
+.secao.refrao {
+  padding: 0.16em 0.7em;
+}
+
+/* Barra, painéis e velocidade: translúcidos, deixam a música aparecer por trás */
+.controles,
+.rolagem-velocidade,
+.painel-rapido {
+  border: 1px solid var(--cinza-2);
+  background: color-mix(in srgb, var(--fundo) 86%, transparent);
+  color: var(--tinta);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  backdrop-filter: blur(18px) saturate(1.3);
+}
+
+.doca-botao small,
+.painel-rapido small {
+  color: var(--cinza-3);
+  opacity: 1;
+}
+
+.doca-botao[aria-expanded='true'],
+.painel-rapido > button {
+  background: var(--cinza-1);
+}
+
+@media (hover: hover) {
+  .doca-botao:hover,
+  .rolagem-velocidade button:hover,
+  .painel-rapido > button:hover {
+    background: var(--cinza-1);
+  }
+}
+
+.controles .rolar[aria-pressed='true'],
+.controles .rolar[aria-pressed='true']:hover {
+  background: var(--tinta);
+  color: var(--fundo);
+}
+
+.controles .rolar[aria-pressed='true'] small {
+  color: inherit;
+}
+
+.controles :focus-visible,
+.rolagem-velocidade :focus-visible,
+.painel-rapido :focus-visible {
+  outline-color: var(--tinta);
+}
+
+/* Menu de opções e dicas */
+.opcoes-cartao {
+  border: 1px solid var(--cinza-2);
+  border-radius: 24px;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
+}
+
+.chave {
+  border: 0;
+  background: var(--cinza-2);
+}
+
+.chave::after {
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.chave[aria-checked='true']::after {
+  background: var(--fundo);
+}
+
+.segmentado {
+  gap: 2px;
+  padding: 3px;
+  border: 0;
+  background: var(--cinza-1);
+}
+
+.segmentado button {
+  border-radius: 9px;
+}
+
+.segmentado button + button {
+  border-left: 0;
+}
+
+kbd {
+  border-width: 1px;
+  border-color: var(--cinza-2);
+}
+
+@media (max-width: 959px) {
+  .capa .logo {
+    width: 176px;
+  }
+}
