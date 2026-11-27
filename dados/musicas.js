@@ -128,10 +128,10 @@ export const musicas = [
     "artista": "Padre Marcelo Rossi",
     "tom": "C",
     "categorias": [
-      "Animação"
+      "Espírito Santo"
     ],
     "link": "",
-    "cho": "{title: Corsa}\n{artist: Padre Marcelo Rossi}\n{key: C}\n{categoria: Animação}\n\nAss[C]im [G]como uma [Am]corsa sus[F]pira [Dm]pelas [G]águas\nAss[C]im susp[Em]ira minha [Am]alma, Esp[F]írit[G]o de [C]Deus [G7]\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[Dm]írito de Deu[G]s\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[G]írito de [C]Deus [G7]\n\n[C]Assim [G]como uma [Am]corsa sus[F]pira [Dm]pelas [G]águas\nAss[C]im susp[Em]ira minha [Am]alma, [F]Espír[G]ito de [C]Deu[G7]s\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Espí[Dm]rito de [G]Deus\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[G]írito de [C]Deus [G7]\n\n[C]Assim [G]como uma [Am]corsa sus[F]pira [Dm]pelas [G]águas\nAss[C]im susp[Em]ira minha [Am]alma, [F]Espír[G]ito de [C]Deu[G7]s\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Espí[Dm]rito de [A#]Deus  [G]\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[G]írito de [C]Deus [G7]\n"
+    "cho": "{title: Corsa}\n{artist: Padre Marcelo Rossi}\n{key: C}\n{categoria: Espírito Santo}\n\nAss[C]im [G]como uma [Am]corsa sus[F]pira [Dm]pelas [G]águas\nAss[C]im susp[Em]ira minha [Am]alma, Esp[F]írit[G]o de [C]Deus [G7]\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[Dm]írito de Deu[G]s\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[G]írito de [C]Deus [G7]\n\n[C]Assim [G]como uma [Am]corsa sus[F]pira [Dm]pelas [G]águas\nAss[C]im susp[Em]ira minha [Am]alma, [F]Espír[G]ito de [C]Deu[G7]s\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Espí[Dm]rito de [G]Deus\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[G]írito de [C]Deus [G7]\n\n[C]Assim [G]como uma [Am]corsa sus[F]pira [Dm]pelas [G]águas\nAss[C]im susp[Em]ira minha [Am]alma, [F]Espír[G]ito de [C]Deu[G7]s\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Espí[Dm]rito de [A#]Deus  [G]\nOh, oh, [C]enche-me Espírito... Oh, [Am]enche-me Espírito\nOh, [F]enche-me Esp[G]írito de [C]Deus [G7]\n"
   },
   {
     "slug": "danca-da-amizade",
@@ -349,10 +349,10 @@ export const musicas = [
     "artista": "Comunidade Católica Colo de Deus",
     "tom": "C",
     "categorias": [
-      "Adoração"
+      "Espírito Santo"
     ],
     "link": "",
-    "cho": "{title: Refrigera Minh'alma}\n{artist: Comunidade Católica Colo de Deus}\n{key: C}\n{categoria: Adoração}\n\n{c: Intro}\n[C]  [F9]  [C]  [F9]\n\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F]Ti [G9]\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F9]Ti  [G9]\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F]Ti [G9]\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F9]ti  [G9]\n"
+    "cho": "{title: Refrigera Minh'alma}\n{artist: Comunidade Católica Colo de Deus}\n{key: C}\n{categoria: Espírito Santo}\n\n{c: Intro}\n[C]  [F9]  [C]  [F9]\n\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n[C]Sopra Espírito [C7M]Santo, sobre [F9]nós [G9]\n\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F]Ti [G9]\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F9]Ti  [G9]\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F]Ti [G9]\nRefrig[Am7]era minhalma e [G/F]faz-me fiel a [F9]ti  [G9]\n"
   },
   {
     "slug": "regaco-acolhedor",
