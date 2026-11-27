@@ -20,7 +20,12 @@ const pastaMusicas = path.join(raiz, 'musicas');
 
 /** Texto colado + ficha existente (ou null) -> conteúdo do .cho. */
 export function converterColado(texto, ficha, nomeDoArquivo) {
-  let linhas = texto.replace(/\r/g, '').replace(/ /g, ' ').split('\n');
+  // Ao copiar de sites vêm caracteres invisíveis (largura zero) e espaços especiais: saem aqui.
+  let linhas = texto
+    .replace(/\r/g, '')
+    .replace(/[\u200b\u200c\u200d\u2060\ufeff]/g, '')
+    .replace(/\u00a0/g, ' ')
+    .split('\n');
   let tom = '';
   linhas = linhas.filter((l) => {
     const m = /^\s*tom\s*:\s*([A-G][#b]?m?)/i.exec(l);
@@ -55,15 +60,22 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     .filter((f) => f.endsWith('.cho'))
     .map((f) => ({ slug: f.replace(/\.cho$/, ''), ...lerChordPro(fs.readFileSync(path.join(pastaMusicas, f), 'utf8')) }));
 
-  const gravar = (origem, slug, texto, nome) => {
+  const escritos = new Set();
+  // nova: { titulo, artista } de uma música que ainda não tem ficha.
+  const gravar = (origem, slug, texto, nome, nova = null) => {
     const destino = path.join(pastaMusicas, `${slug}.cho`);
     const ficha = fichas.find((f) => f.slug === slug) || null;
+    if (escritos.has(slug)) {
+      console.log(`${origem}: repetida neste arquivo; fiquei com a primeira.`);
+      return;
+    }
     if (ficha?.linhas.length && !process.argv.includes('--forcar')) {
       console.log(`${origem}: ${slug}.cho já tem cifra; use --forcar para trocar.`);
       return;
     }
-    const { titulo, cho } = converterColado(texto, ficha, nome);
+    const { titulo, cho } = converterColado(texto, ficha || nova, nome);
     fs.writeFileSync(destino, cho);
+    escritos.add(slug);
     console.log(`${origem} -> musicas/${slug}.cho (${titulo})${ficha ? '' : '  [nova: coloque {categoria: ...}]'}`);
   };
 
@@ -79,10 +91,24 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     // Várias músicas num arquivo só: cada uma começa com "TítuloArtista" e, logo abaixo, "Tom: X".
     for (const bloco of blocos) {
       const ficha = acharFicha(bloco.cabecalho, fichas);
-      if (ficha) gravar(`${arquivo} [${ficha.titulo}]`, ficha.slug, bloco.texto, ficha.slug);
-      else gravar(`${arquivo} [${bloco.cabecalho}]`, slugificar(bloco.cabecalho), `${bloco.cabecalho}\n${bloco.texto}`, bloco.cabecalho);
+      if (ficha) {
+        gravar(`${arquivo} [${ficha.titulo}]`, ficha.slug, bloco.texto, ficha.slug);
+        continue;
+      }
+      const { titulo, artista } = separarTituloArtista(bloco.cabecalho);
+      gravar(`${arquivo} [${titulo}]`, slugificar(titulo), bloco.texto, titulo, { titulo, artista, categorias: [] });
     }
   }
+}
+
+/**
+ * O site copia o título grudado no artista: "BanqueteFraternidade X" -> "Banquete" + "Fraternidade X".
+ * A divisão é onde uma minúscula, número ou ")" encosta numa maiúscula, sem espaço.
+ */
+export function separarTituloArtista(cabecalho) {
+  const limpo = cabecalho.replace(/[​‌‍⁠﻿]/g, '').trim();
+  const m = /^(.*?[\p{Ll}\d).!?])(\p{Lu}.*)$/u.exec(limpo);
+  return m ? { titulo: m[1].trim(), artista: m[2].trim() } : { titulo: limpo, artista: '' };
 }
 
 function compacto(s) {

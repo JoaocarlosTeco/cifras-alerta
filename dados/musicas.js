@@ -35,6 +35,17 @@ export const musicas = [
     "cho": "{title: 99 Ovelhas}\n{artist: Fraternidade São João Paulo II}\n{key: Am}\n{categoria: Reflexão}\n\n{c: Intro}\n[Am]  [C]  [G11]  [F7M]\n\n(Sem Capotraste, Drop D)\n\n{c: Primeira Parte}\n[Am7]    Não compreendo como me acolhes\n[C]  E não entendo como me escolhes\nSe o [G11]meu amor ainda é tão [F7M]    pequeno\n\n[Am7]    Noventa e nove estão no aprisco\n[C]  E só tem uma correndo risco\nNão [G11]valeria a pena se arris_[F7M]____car\n\n[Am7]    Não compreendo como me acolhes\n[C]  E não entendo como me escolhes\nSe o [G11]meu amor ainda é tão [F7M]    pequeno\n\n[Am7]    Noventa e nove estão no aprisco\n[C]  E só tem uma correndo risco\nNão [G11]valeria a pena se arris_[F7M]____car\n\n{c: Ponte}\n[G6]Mas Você não calcula a um valor supremo\n[F7M/C]      E paga o preço\n\nPelo valor que eu tenho\nQue é [Dm]bem maior [F7M/C]\nDo que eu posso enxerg[Am7]ar   [G]\n\n[G6]Mas Você não calcula a um valor supremo\n[F7M/C]      E paga o preço\n\nPelo valor que eu tenho\nQue é [Dm]bem maior [F7M/C]\nDo que eu posso enxerg[Am7]ar   [G]\n\n{c: Refrão}\nNov[C]enta e nove ovelhas\n\nVocê veio atrás de mim\nE [F7M]logo eu que sempre achei\n\nQue não tinha valor\nMas Você me am[Dm]ou, [F7M]    me am[G]ou\n\nE [C]nada do que eu faça\n\nVai mudar o Teu amor\nEnx[F7M]erga em mim um santo\n\nQuando eu vejo um pecador\nSó porque me am[Dm]ou, [F7M]    me am[G]ou\n\n{c: Interlúdio}\n[Am]  [C]  [G]  [F]\n\n(Com Capotraste)\n\n{c: Ponte}\n[G6]Mas Você não calcula a um valor supremo\n[F7M/C]      E paga o preço\n\nPelo valor que eu tenho\nQue é [Dm]bem maior [F7M/C]\nDo que eu posso enxerg[Am7]ar   [G]\n\n[G6]Mas Você não calcula a um valor supremo\n[F7M/C]      E paga o preço\n\nPelo valor que eu tenho\nQue é [Dm]bem maior [F7M/C]\nDo que eu posso enxerg[Am7]ar   [G]\n\n{c: Refrão}\nNov[C]enta e nove ovelhas\n\nVocê veio atrás de mim\nE [F7M]logo eu que sempre achei\n\nQue não tinha valor\nMas Você me am[Dm]ou, [F7M]    me am[G]ou\n\nE [C]nada do que eu faça\n\nVai mudar o Teu amor\nEnx[F7M]erga em mim um santo\n\nQuando eu vejo um pecador\nSó porque me am[Dm]ou, [F7M]    me am[G]ou\n\n{c: Refrão Final}\nNov[C]enta e nove ovelhas\n\nVocê veio atrás de mim\nE [F7M]logo eu que sempre achei\n\nQue não tinha valor\nMas Você me am[Dm]ou, [F7M]    me am[G]ou\n\nE [C]nada do que eu faça\n\nVai mudar o Teu amor\nEnx[F7M]erga em mim um santo\n\nQuando eu vejo um pecador\nSó porque me am[Dm]ou, [F7M]    me am[G]ou\n\n{c: Final}\n[C]  [G]  [F7M]  [G6]\n"
   },
   {
+    "slug": "abba-pai",
+    "titulo": "Abba Pai",
+    "artista": "Colo de Deus",
+    "tom": "A",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Abba Pai}\n{artist: Colo de Deus}\n{key: A}\n{categoria: Adoração}\n\n{c: Intro}\n[G]  [Em]  [Bm7]  [Am7]  [D]\n[G]  [Em]  [Bm7]  [Am7]  [D]\n\n[G]Entrei no Teu jard[Em]im\nPra estar contigo, [D9/B]Pai\nSentar naquele [Am7]banco\nOnde [D]me encontro[G]u\n\nVoltei ao Teu jar[Em7]dim\nPra ouvir a Tua [D9/B]voz\nA me dizer, me [Am7]prometer\nQue não me [G/B]abandonar[C9]á\nNão me deix[Em7]ará, me abraçar[Am7]á     [Em7]    [D/F#]     [G]\n\n[(Em7]  [D/F#]  [C9)]\n\n[C9]  No jardim secr[Em7]eto\nLugar prefer[C9]ido\nSacrário escond[Em7]ido\nVou fi[D/F#]car aqui\n[C9]  Senti o Teu perfu[Em7]me\nMe escondi no Teu coraç[C9]ão\nAqui eu sou cria[Em7]nça\nEmbal[D/F#]ado em Teus braços [C9]Papai\n(Abba [Em7]Pai)\nEmbal[D/F#]ado em Teus beijos [C9]Papai\n(Abba [Em7]Pai)    [D/F#]\n"
+  },
+  {
     "slug": "agachadinho",
     "titulo": "Agachadinho",
     "artista": "",
@@ -55,6 +66,17 @@ export const musicas = [
     ],
     "link": "",
     "cho": "{title: Animais}\n{key: F}\n{categoria: Animação}\n\n[F]Eu vinha ca[C7]minhando [F]para a santidade\nQuando [C7]aviste[F]i uma vaca!\nEu olhei [C7]pra ela, ela [F]olhou p/ mim!\nE quando [C7]eu percebi, [F]ela louvava assim\nA [F]a [C7]a a [C7]a a [F]a a a\nA [F]a [C7]a a [C7]a a [F]a a a\nUm[C7]a vez, outr[F]a vez, uma [C7]ve[F]z, outra vez, outra vez\n\n[F]Eu vinha ca[C7]minhando [F]para a santidade\nQuando [C7]avistei [F]um   Jacaré!\nEu olhei [C7]pra ele, ele ol[F]hou p/ mim!\nE quando [C7]eu percebi, el[F]e louvava assim\nÉ [F]é é [C7]é é é [F]é é é é [C7]é\nÉ [F]é [C7]é [F]é [C7]é é é é é é é\n[C7]Uma vez, outr[F]a vez, um[C7]a ve[F]z, outra vez, outra vez\n"
+  },
+  {
+    "slug": "banquete",
+    "titulo": "Banquete",
+    "artista": "Fraternidade São João Paulo II",
+    "tom": "C#m",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Banquete}\n{artist: Fraternidade São João Paulo II}\n{key: C#m}\n{categoria: Adoração}\n\n{c: Intro}\n[A]  [B]  [C#m]  [G#m]\n[A]  [B]  [C#m]  [G#m]\n\n{c: Primeira Parte}\n[A]A festa já está [B]pre[C#m]parada, são muitos convi[G#m]dados\nMas poucos decidi[A]dos\n\n[A]A festa já está [B]pre[C#m]parada\nMuitos são cham[G#m]ados, mas poucos escolh[A]idos\n\n[B]Ouvi o rei me cham[A]ar,[B] se és bom ou mau, não im[C#m]porta\n[B]Não quero ser como os ou[A]tros\n[A]Eu vou entrar, vou feste[B]jar de vestes [C#m]novas[G#m]\n\n{c: Refrão}\n[A]Dá-me tuas vestes,[B] dá-me tuas vestes[C#m], dá-me tuas vestes [G#m]Jesus\n[A]Dá-me tuas vestes,[B] dá-me tuas vestes[C#m], dá-me tuas vestes [G#m]Jesus\n\n{c: Intro}\n[A]Senhor eu sei que eu não [B]mere[C#m]ço, mas hoje com tuas ve[G#m]stes estou\nMas hoje com tuas ve[A]stes estou\n[A]Agora eu já posso [B]ent[C#m]rar na ceia que [G#m]você preparou\nNa ceia que vo[A]cê preparou\n\n[B]Ouvi o rei me cham[A]ar, [B]se és bom ou mau, não impo[C#m]rta\n[B]Não quero ser como os ou[A]tros\n[A]Eu vou entrar, vou feste[B]jar de vestes [C#m]novas[G#m]\n\n{c: Refrão}\n[A]Dá-me tuas vestes,[B] dá-me tuas vestes[C#m], dá-me tuas vestes [G#m]Jesus\n[A]Dá-me tuas vestes,[B] dá-me tuas vestes[C#m], dá-me tuas vestes [G#m]Jesus\nE este [A]banquete é tua pre[B]sença Deus e se tuas [C#m]vestes eu tiver\nEm tua pre[G#m]sença habitarei\nE este [A]banquete é tua pre[B]sença Deus e se tuas [C#m]vestes eu tiver\nEm tua pre[G#m]sença habitarei\nE este [A]banquete é tua pre[B]sença Deus e se tuas [C#m]vestes eu tiver\nEm tua pre[G#m]sença habitarei\nE este [A]banquete é tua pre[B]sença Deus e se tuas [C#m]vestes eu tiver\nEm tua pre[G#m]sença habitarei\n\n[B]Ouvi o rei me cham[A]ar, [B]se és bom ou mau, não impo[C#m]rta\n[B]Não quero ser como os ou[A]tros\n[A]Eu vou entrar, vou feste[B]jar de vestes [C#m]novas[G#m]\n"
   },
   {
     "slug": "casa",
@@ -145,6 +167,17 @@ export const musicas = [
     "cho": "{title: Dança da Amizade}\n{key: E}\n{categoria: Animação}\n\n[E]A nossa dança\nÉ a dança da am[B]izade\nÉ ale[A]gria para [B]lá e para [E]cá\nÉ ale[A]gria para [B]lá e para [E]cá\nÉ ale[A]gria para [B]lá e para [E]cá\nÉ ale[A]gria para [B]lá e para [E]cá\n\nLai[E]á laiá lai[B]á lai[A]á lai[B]á lai[E]á\nLai[E]á laiá lai[B]á lai[A]á lai[B]á lai[E]á\nLai[E]á laiá lai[B]á lai[A]á lai[B]á lai[E]á\nLai[E]á laiá lai[B]á lai[A]á lai[B]á lai[E]á\n"
   },
   {
+    "slug": "desperta",
+    "titulo": "Desperta",
+    "artista": "Hugo Santos",
+    "tom": "E",
+    "categorias": [
+      "Entrega"
+    ],
+    "link": "",
+    "cho": "{title: Desperta}\n{artist: Hugo Santos}\n{key: E}\n{categoria: Entrega}\n\n{c: Intro}\n[C#m]  [E]  [A]\n[A]  [C#m]  [B]\n\n{c: Primeira Parte}\n[E9]Aviva o [B/D#]meu coração cansa[C#m7]do de esperar[A9]\nReliga Tua vida em [E9]mim, [B4]   Tua vida em [C#m7]mim    [A9]\nDesp[E9]erta tu [B/D#]que dormes na escu[C#m7]ridão [A9]\nVem ouvir as trom[E9]betas de Sião[B4]    [C#m7]      [A9]\n\n{c: Refrão}\nProcl[C#m7(9)]ama      [B4]   que Jesus voltando [A9]está\nQue o Seu Reino não [C#m7(9)]findará   [B4]\nQue o cordeiro é o Le[A9]ão que no trono está\n\nProcl[C#m7(9)]ama      [B4]   que Jesus voltando [A9]está\nQue o Seu Reino não [C#m7(9)]findará   [B4]\nQue o cordeiro é o Le[A9]ão que no trono está\n\n{c: Segunda Parte}\n[C#m7(9)]Escuta povo [B4]meu , Sou a promessa das naç[A9]ões, Vou levantar [F#m]você\nPara ser a minha [C#m7(9)]voz e ser as minhas mã[B4]os\nE hoje nessa geraç[A9]ão te escolhi és meu[F#m]!\n\n[C#m7(9)]Escuta povo [B4]meu , Sou a promessa das naç[A9]ões, Vou levantar [F#m]você\nPara ser a minha [C#m7(9)]voz e ser as minhas mã[B4]os\nE hoje nessa geraç[A9]ão te escolhi és meu[F#m]!\n\n{c: Refrão}\nProcl[C#m7(9)]ama      [B/D#]   que Jesus voltando est[A9]á\nQue o Seu Reino não [C#m7(9)]findará   [B4]\nQue o cordeiro é o Le[A9]ão que no trono está\n\nProcl[C#m7(9)]ama      [B/D#]   que Jesus voltando est[A9]á\nQue o Seu Reino não [C#m7(9)]findará   [B4]\nQue o cordeiro é o Le[A9]ão que no trono está\n\n{c: Terceira Parte}\nVou aviv[E9]ar o teu [B/D#]coração, Cansado [C#m7(9)]de esperar [A9]\nVou te atr[E/G#]air, te conquistar[B/D#]\nDesperta é tempo de [C#m7(9)]mudar     [A9]\nDesperta é tempo de [E9]mudar\n"
+  },
+  {
     "slug": "eis-me-aqui-senhor",
     "titulo": "Eis-me Aqui, Senhor",
     "artista": "",
@@ -211,6 +244,28 @@ export const musicas = [
     "cho": "{title: Irmão Sol, Irmã Lua}\n{artist: Padre Zezinho}\n{key: Em}\n{categoria: Animação}\n\nIrmão [Em]Sol com irmã Luz trazendo o [Am]dia pela [B7]mão\nIrmão [Em]céu, de intenso [C]azul a in[Am]vadir o cor[B7]ação alelu[E]ia-a-a-a [B7]\nIrm[E]ãos, minhas irm[A]ãs, vamos cant[E]ar nesta man[A]hã\nPois renasc[E]eu mais uma [F#]vez, a cria[B7]ção [A]das [E/G#]mãos [A/B]de Deus\nIrm[E]ãos, minhas irm[A]ãs, vamos cant[E]ar\nAlelu[A]ia, alelu[E]ia, alelu..[A]u....[B7]u...u.....[E]ia\n\nMinha [Em]irmã Terra, que ao pé dá seg[Am]urança de che[B7]gar\nMinha ir[Em]mã planta que [C]está suav[Am]emente a res[B7]pirar: alel[E]uia-a-a-a[B7]\n\nIrmã [Em]flor que mal se abriu fala do [Am]amor que não tem [B7]fim\nÁgua [Em]irmã, que nos re[C]faz e sai do [Am]chão cantando as[B7]sim: alel[E]uia-a-a-a[B7]\n\nPass[Em]arinhos, meus irmãos, com mil canç[Am]ões a ir [B7]e vir\nHomens[Em], todos, meus irm[C]ãos, que noss[Am]a voz se faça [B7]ouvir:      [E]\nAle[B7]luia-a-a-a\n"
   },
   {
+    "slug": "jardim",
+    "titulo": "Jardim",
+    "artista": "Fraternidade São João Paulo II",
+    "tom": "G",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Jardim}\n{artist: Fraternidade São João Paulo II}\n{key: G}\n{categoria: Adoração}\n\n{c: Intro}\n[G5]  [D11/F#]  [Em7]  [C9]\n[G5]  [D11/F#]  [Em7]  [C9]\n\n{c: Primeira Parte}\nSenh[G5]or, já posso ouvir a Tua voz\nE [G7M]os Teus passos a se aproximar de [Em7]mim\nSe aproximar de [C9]mim\n\nSenh[G5]or, eu sei que digno eu não sou\nMas [G7M]eu preciso tanto ouvir a Tua [Em7]voz\nDiz[C9]endo, vem\n\n{c: Ponte}\n[Em7]Mas eu sei, pequ[Bm7(11)]eno sou\n[C9]Mas eu sei, tão fr[D2]aco estou\n\nMas [Em7]sei também, sem [Bm7(11)]Ti eu não\nCons[Am7]igo pr[G/B]ossegu[C9]ir\n\n[Em7]Mas eu sei, pequ[Bm7(11)]eno sou\n[C9]Mas eu sei, tão fr[D2]aco estou\n\nMas [Em7]sei também, sem [Bm7(11)]Ti eu não\nCons[Am7]igo prossegu[D4]ir  [D/F#]\n\n{c: Refrão}\n[G5]   Mesmo com tantos err[D11/F#]os que eu cometi\n[Em7]    O Teu olhar jam[Bm7(11)]ais\nSe afastou de [C9]mim\nE ao som de Tua [Bm7(11)]voz me resta te buscar\n[Em7]Cada dia mais, cada dia [D2]mais\n\n[G5]   Ver Teus olhos [G7M]sempre fixos em mim\n[Em7]    Me fazem record[Bm7(11)]ar\nDos passos no jard[C9]im\nE ao som de Tua [Bm7(11)]voz me resta te buscar\n[Em7]Cada dia mais, cada dia [D4]mais [D/F#]\n\n{c: Interlúdio}\n[G]  [D11/F#]  [Em7]  [C9]\n\n{c: Ponte}\n[Em7]Mas eu sei, pequ[Bm7(11)]eno sou\n[C9]Mas eu sei, tão fr[D2]aco estou\n\nMas [Em7]sei também, sem [Bm7(11)]Ti eu não\nCons[Am7]igo prossegu[D4]ir  [D/F#]\n\n{c: Refrão}\n[G5]   Mesmo com tantos err[D11/F#]os que eu cometi\n[Em7]    O Teu olhar jam[Bm7(11)]ais\nSe afastou de [C9]mim\nE ao som de Tua [Bm7(11)]voz me resta te buscar\n[Em7]Cada dia mais, cada dia [D2]mais\n\n[G5]   Ver Teus olhos [G7M]sempre fixos em mim\n[Em7]    Me fazem record[Bm7(11)]ar\nDos passos no jard[C9]im\nE ao som de Tua [Bm7(11)]voz me resta te buscar\n[Em7]Cada dia mais, cada dia [D2]mais\n\n{c: Interlúdio}\n[G]  [G7M]  [Em7]  [C9]\n[G]  [G7M]  [Em7]  [C9]\n[G]  [G7M]  [Em7]  [C9]\n\n{c: Refrão}\n[G5]   Mesmo com tantos err[D11/F#]os que eu cometi\n[Em7]    O Teu olhar jam[Bm7(11)]ais\nSe afastou de [C9]mim\nE ao som de Tua [Bm7(11)]voz me resta te buscar\n[Em7]Cada dia mais, cada dia [D2]mais\n\n[G5]   Ver Teus olhos [G7M]sempre fixos em mim\n[Em7]    Me fazem record[Bm7(11)]ar\nDos passos no jard[C9]im\nE ao som de Tua [Bm7(11)]voz me resta te buscar\n[Em7]Cada dia mais, cada dia [D2]mais\n\n{c: Final}\n[G5]  [D11/F#]  [Em9]  [C9]  [G]\n"
+  },
+  {
+    "slug": "jesus-meu-esposo",
+    "titulo": "Jesus Meu Esposo",
+    "artista": "Colo de Deus",
+    "tom": "D",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Jesus Meu Esposo}\n{artist: Colo de Deus}\n{key: D}\n{categoria: Adoração}\n\n{c: Primeira Parte}\nÉ [G7M]digno que a esposa\nSe cubra com as [D]vestes do esposo [D9]\nÉ justo que eu me [G7M]vista\n\nCom as feridas do teu corpo\nJesus meu esp[D]oso [D9]    [D]   [D9]\n[D/F#]     Eu tr[G7M]oco as coroas desse mundo\nPela coroa [D]e os seus espinhos [D9]\nÉ [D/F#]justo que eu me [G7M]cubra com a tua dor\nJesus meu esp[D]oso [D9]    [D]\n\n{c: Refrão}\nMe deixe entr[G7M]ar\nNa brecha do teu [D7M]peito [D7M(9)]\nTe conhec[G7M]er por dentro\n\nE em tuas chagas\nCura [D]e libertaç[D9]ão encontr[D7M(9)]ar\n\nMe deixe entr[G7M]ar\nNa brecha do teu [D]peito [D7M(9)]\nTe conhec[G7M]er por dentro\n\nE em tuas chagas\nCura [D]e libertação encontr[D7M(9)]ar\n\nMe deixe entr[G7M]ar\nNa brecha do teu [D]peito [D7M(9)]\nTe conhec[G7M]er por dentro\n\nE em tuas chagas\nCura [D]e libertação encontr[D7M(9)]ar\n\n{c: Pós-Refrão}\nAvivamento encontr[G7M]ar\n\nEsperança encontrar\nTua face encontr[D]ar\n\nAvivamento encontr[G7M]ar\nEsperança encontr[D]ar\nTua face encontr[G7M]ar   [D]\n\n{c: Ponte}\nJesus meu esp[G7M]oso\nJesus meu esp[D]oso\nJesus meu esp[G7M]oso\nJesus meu esp[D]oso\n\n{c: Segunda Parte}\nEu estou entr[G7M]ando\n\nEu estou entrando\nE quanto mais eu [D]entro\nMais eu me enc[G7M]anto\n\nEu estou entr[G7M]ando (eu estou entrando)\n\nEu estou entrando (eu estou entrando)\nE quanto mais eu [D]entro\n\nMais eu me apaixono\n\nEu estou entr[G7M]ando (eu estou entrando)\n\nEu estou entrando (eu estou entrando)\nE quanto mais eu me apaix[D]ono\n\nMais eu me conheço\n\nE descubro que eu sou [G7M]louco\n\nE descubro que eu sou louco\nE descubro que eu te [D]amo\n\nMais do que eu imaginava\n\nE eu tenho coragem de largar [G7M]tudo\n\nQuando estou aqui\n\nE eu tenho coragem de renunciar tudo\n\nQuando estou aqui\nE eu tenho coragem de me abandon[D]ar\n\nDe me abandonar, de me abandonar, ah!\n\n[G7M]E quando eu entro\n\nEu me apaixono\n\nE eu me torno como Você\n[D]E quando eu entro\n\nEu me apaixono\n\nE eu me torno como Você\n[G7M]E quando eu entro\n\nEu me apaixono\n\nE eu me torno como Você\n[D]E quando eu entro, eu me apaixono, ooh\n\n{c: Refrão}\nMe deixe entr[G7M]ar\nNa brecha do teu [D]peito [D7M]\nTe conhec[G7M]er por dentro\n\nE em tuas chagas\nCura [D]e libertação encontr[D7M]ar\n\nMe deixe entr[G7M]ar\n\nNa brecha do teu peito\n\nTe conhecer por dentro\n\nE em tuas chagas\nCura [D]e libertação encontrar\n"
+  },
+  {
     "slug": "maezinha-do-ceu",
     "titulo": "Mãezinha do Céu",
     "artista": "Padre Marcelo Rossi",
@@ -243,6 +298,17 @@ export const musicas = [
     ],
     "link": "",
     "cho": "{title: Minha Essência}\n{key: E}\n{categoria: Adoração, Entrega}\n\n[E]Vim até aq[E7M]ui   [E]\nDerram[A]ar o meu pas[C#m]sado [C#9]em [C#m]ti\nVim [C#m]banhar os pés que [F#m]andaram por aí\nSem carinho receb[B]er\n\n[E]Hoje estou aq[E7M]ui   [E]\n[A]Não por que mer[C#m]eço eu [C#9]sei[C#m]\nPois [E6/C#]tu sabes po[F#m]r onde eu andei\nConheces bem o meu perf[B]ume\n\n{c: Pré-Refrão}\nMas tu [C#m]sabes também\nQue o meu choro é sin[G#m]cero porém\nNão tenho nada a oferec[A]er meu Senhor[F#m]\nMas te dou a minha [B]vida\n\n{c: Refrão}\nÉ tudo que [E]tenho [E7M]     [E]\nRec[A]ebe o meu [C#m]nad[C#9]a   [C#m]\nRef[E6/C#]az a mor[A]ada [F#m]\nHabita em [B]mim\n\nMe pega em teu [E]colo [E7M]     [E]\nMe ac[A]alma em teu [C#m]peito[C#9]    [C#m]\nSou [E6/C#]Teu sou ele[A]ito  [F#m]\nE a minha ess[B]ência é exalar, Teu ch[E]eiro\n\n[(A]  [C#m]  [A)]\n[(E]  [A]  [E]  [B)]\n\n{c: Primeira Parte}\n[E]Vim até aq[E7M]ui   [E]\nDerram[A]ar o meu pas[C#m]sado [C#9]em [C#m]ti\nVim [E6/C#]banhar os pés que and[F#m]aram por aí\nSem carinho receb[B]er\n\n[E]Hoje estou aq[E7M]ui    [E]\n[A]Não por que mer[C#m]eço eu [C#9]se[C#m]i\nPois [E6/C#]tu sabes po[F#m]r onde eu andei\nConheces bem o meu perf[B]ume\n\n{c: Pré-Refrão}\nMas tu [C#m]sabes também\nQue o meu choro é sin[G#m]cero porém\nNão tenho nada a oferec[A]er meu Senhor[F#m]\nMas te dou a minha [B]vida\n\n{c: Refrão}\nÉ tudo que [E]tenho [E7M]     [E]\nRec[A]ebe o meu [C#m]nada [C#9]    [C#m]\nRef[E6/C#]az a mor[A]ada [F#m]\nHabita em [B]mim\n\nMe pega em teu [E]colo [E7M]     [E]\nMe ac[A]alma em teu [C#m]peito [C#9]    [C#m]\nSou [E6/C#]Teu sou ele[A]ito [F#m]\nE a minha ess[B]ência é exalar, Teu ch[E]eiro\n"
+  },
+  {
+    "slug": "mistica-sublime",
+    "titulo": "Mística Sublime",
+    "artista": "Colo de Deus",
+    "tom": "C",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Mística Sublime}\n{artist: Colo de Deus}\n{key: C}\n{categoria: Adoração}\n\n{c: Intro}\n[F7M]\n\n{c: Primeira Parte}\nMística subl[F7M]ime te receber\nTer comunh[Am7]ão   [C]\nTer correndo em [F7M]mim teu sangue Deus\nEstou em comunh[Am7]ão   [C]\n\n{c: Segunda Parte}\nAlguém dir[F7M]á que um Deus\nTão grande assim, não [Am7]se dará\nPor [C]mim?\nO que os meus [F7M]olhos vêem\nNão é o que, minh'[Am7]alma diz [C]\n\n{c: Primeira Parte}\nMística subl[F7M]ime te receber\nTer comunh[Am7]ão   [C]\nTer correndo em [F7M]mim teu sangue Deus\nEstou em comunh[Am7]ão   [C]\n\n{c: Segunda Parte}\nAlguém dir[F7M]á que um Deus\nTão grande assim, não [Am7]se dará\nPor [C]mim?\nO que os meus [F7M]olhos vêem\nNão é o que, minh'[Am7]alma [G]diz\n\n{c: Refrão}\nJá não é mais [F7M]vinho não\nÉ o sangue do meu [Am7]Deus  [C]\nJá não é mais [F7M]pão aqui\nÉ o corpo do meu am[Am7]or\nDo meu am[C]or\n\nE neste lug[F7M]ar, eu posso dizer\nEstás dentro de [Am7]mim\nE eu dentro de voc[C]ê\nE neste lug[F7M]ar, eu posso dizer\nEstás dentro de [Am7]mim\nE eu dentro de voc[C]ê\n\n{c: Pós-Refrão}\nE eu dentro de voc[F7M]ê\n\nE eu dentro de você\nE eu dentro de voc[Am7]ê\nE eu dentro de voc[C]ê\n\nE eu dentro de voc[F7M]ê\n\nE eu dentro de você\nE eu dentro de voc[Am7]ê\nE eu dentro de voc[C]ê\n\nAgora nós dois [F7M]somos um\nAgora nós dois [Am7]somos um [C]\nAgora nós dois [F7M]somos um\nAgora nós dois [Am7]somos um [C]\n\n{c: Final}\n[F7M]  [Am7]  [C]  [F7M]  [Am7]  [C]\n[F7M]  [Am7]  [C]  [F7M]  [Am7]  [C]\n"
   },
   {
     "slug": "molim-molim",
@@ -311,6 +377,17 @@ export const musicas = [
     "cho": "{title: Passa Fogo}\n{key: D}\n{categoria: Animação}\n\nPa[D]ssa fogo no meu bra[G]ço agora\nPassa [D]fogo no meu braço ago[G]ra\nPassa fo[D]go no meu braço ago[A]ra , [G]oh [D]Senho[G]r! [A]\n\nPassa fog[D]o na minha perna ago[G]ra\nPassa fo[D]go na minha perna ago[G]ra\nPas[D]sa fogo na [A]minha pe[G]rna [D]agor[G]a  ,[A]oh Senhor!\n\nPas[D]sa fogo na [G]cabeça agora\nPas[D]sa fogo na [G]cabeça agora\nPas[D]sa fogo na [A]cabe[G]ça [D]agora[G], [A]oh Senhor!\n\nPas[D]sa fogo no [G]meu coração\nPas[D]sa fogo no [G]meu coração\nPas[D]sa fogo no [A]meu [G]cor[D]ação[G], [A]oh Senhor!\n\n{c: Refrão}\nEu diss[A]e:  braço, perna, cabeça e coração\n[G]Braço, perna, cabeça e coração\n[A]Braço, perna, cabe[D]ça [D4]e coração\n\nEu diss[A]e:  braço, perna, cabeça e coração\n[G]Braço, perna, cabeça e coração\n[A]Braço, perna, cabe[D]ça [D4]e coração\n\nEstou [D]sentindo su[G]a força agora\nEstou [D]sentindo [G]sua força agora\nEstou [D]sentindo [A]sua forç[G]a ag[D]ora  [G], [A]oh Senhor!\n\nEstou [D]sentindo su[G]a força agora\nEstou [D]sentindo [G]sua força agora\nEstou [D]sentindo [A]sua forç[G]a ag[D]ora  [G], [A]oh Senhor!\n\n{c: Refrão}\nEu diss[A]e:  Braço, perna, cabeça e coração\n[G]Braço, perna, cabeça e coração\n[A]Braço, perna, cabe[D]ça [D4]e coração\n"
   },
   {
+    "slug": "perfume",
+    "titulo": "Perfume",
+    "artista": "Fraternidade São João Paulo II",
+    "tom": "C",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Perfume}\n{artist: Fraternidade São João Paulo II}\n{key: C}\n{categoria: Adoração}\n\n{c: Intro}\n{c: Tab - Intro}\nParte 1 de 3\n\nParte 2 de 3\n\nParte 3 de 3\n\n{c: Arpejos - Primeira Parte}\nParte 1 de 5\n\nParte 2 de 5\n\nParte 3 de 5\n\nParte 4 de 5\n\nParte 5 de 5\n\n{c: Primeira Parte}\nTeu perfume me atr[C]ai! Vou me apr[F7M]oximar!\nNão sei mais vi[Am7]ver distante de onde eu nasc[G]i pra estar\nSei que existe [C]um lugar onde eu quero [F7M]habitar\nOnde minha [Am7]vida é derramada\n[G]Como sacrifício no al[Dm]ta___[D9]____[G]ar!\n\n{c: Segunda Parte}\nO perfume que [C9]eu... hoje trago [F7M]a Ti\nÉ de um vaso queb[Am7]rado e derramado aos Teus [G]pés\nMas de tanto [Am7]ficar... di[G/B]ante de [C]Ti\nEu perco meu ch[Am7]eiro e exalo\n[G]O Teu perfume em [Dm]mi --- [G]im!\n\n{c: Refrão}\nE ao me aproxi[F7M]mar de Ti\nRec[G]ebo o perfume do [Am7]Amado meu![C]\nE sobre os Teus al[F7M]tares\n[G]Oferto o meu coração que é [Am7]Teu!  [C]\nE ao me aproxi[F7M]mar de Ti\nRec[G]ebo o perfume do [Am7]Amado meu![C]\nE sobre os Teus al[F7M]tares\n[G]Oferto o meu coração que é [F7M]Teu!   [G]\n\n{c: Interlúdio}\n[Am7]  [C9]  [F7M]  [G]\n\n{c: Pós refrão}\n[F7M] Teu perfume eu exalo\n[G] Toda vez que eu me derramo, e eu\n[Am7]Te conheço [Em7]mais!\n[F7M] E quanto mais eu me derramo\n[G] Mais percebo que Te amo!\nMais aum[Am7]enta o meu [Em7]amor!\n\n{c: Refrão}\nE ao me aproxi[F7M]mar de Ti\nRec[G]ebo o perfume do [Am7]Amado meu [C]\nE sobre os Teus al[F7M]tares\n[G]Oferto o meu coração que é [Am7]Teu!  [C]\nE ao me aproxi[F7M]mar de Ti\nRec[G]ebo o perfume do [Am7]Amado meu![C]\nE sobre os Teus al[F7M]tares\n[G]Oferto o meu coração que é [F7M]Teu!  [G]   [C]\n"
+  },
+  {
     "slug": "pescador-de-cristo",
     "titulo": "Pescador de Cristo",
     "artista": "",
@@ -331,6 +408,17 @@ export const musicas = [
     ],
     "link": "",
     "cho": "{title: Pipoca}\n{key: D}\n{categoria: Animação}\n\n[D]Uma pipoca espocando [A]na panela\nUma sozinha, o louvor quase não [D]sai\nMas quando chega mais uma na pan[A]ela\nAí então o louvor aumenta [D]mais\n\n[D]Uma pipoca espocando [A]na panela\nUma sozinha, o louvor quase não [D]sai\nMas quando chega mais uma na pan[A]ela\nAí então o louvor aumenta [D]mais\n\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\n\nAgora são duas pipocas\n\nDuas pip[D]ocas espocando na pa[A]nela\nUma sozinha, o louvor quase não [D]sai\nMas quando chega mais uma na pan[A]ela\nAí então o louvor aumenta [D]mais\n\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\n\nAgora são três pipocas\n\nTrês pip[D]ocas espocando na pa[A]nela\nUma sozinha, o louvor quase não [D]sai\nMas quando chega mais uma na pan[A]ela\nAí então o louvor aumenta [D]mais\n\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\n\nAgora são todas as pipocas juntas\n\nTodas pip[D]ocas espocando na pa[A]nela\nUma sozinha, o louvor quase não [D]sai\nMas quando chega mais uma na pan[A]ela\nAí então o louvor aumenta [D]mais\n\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\nÉ um tal de [A]ploc ploc ploc [D]ploc ploc ploc [A]ploc ploc ploc [D]ploc\n\nParararararara [Em]raarara [A]raarara [D]raarara\nParararararara [Em]raarara [A]raarara [D]raarara\nParararararara [Em]raarar[A]a raarar[D]a raarara\nParararararara [Em]raarara [A]raarara [D]raarara\n"
+  },
+  {
+    "slug": "principe-da-paz-part-flavio-vitor-jr",
+    "titulo": "Príncipe da Paz (part. Flavio Vitor Jr.)",
+    "artista": "Fraternidade São João Paulo II",
+    "tom": "D",
+    "categorias": [
+      "Adoração"
+    ],
+    "link": "",
+    "cho": "{title: Príncipe da Paz (part. Flavio Vitor Jr.)}\n{artist: Fraternidade São João Paulo II}\n{key: D}\n{categoria: Adoração}\n\n[D]O príncipe da paz\nRoubou minha [A9]paz\nE não me dá [Bm]paz\nEnquanto eu não descanso [G]nele\n\n(Eu não descanso)\n\n[G]Um nome, Yeshua\n[A9]Um cheiro, de incenso\n[D]Quando a igreja se reúne para [G]adorar\n[G]Um ano, [Bm]2012\n[A9]Um dia, o do nosso encontro\n[D]Quando eu deixei você me [G]conquistar\n[G]Uma vida\n\nA minha\n[A]Eu nunca imaginaria\n[D]Onde esse amor iria me [G]levar\n[Bm]Uma verdade\nEu nunca [A]mais fui o mesmo\nEu per[G]di o meu sossego\nAo te [A]encontrar\n\n[D]O príncipe da paz\nRoubou minha [A]paz\nE não me dá [Bm]paz\nEnquanto eu não descanso [G]nele\n[D]  [A]  [Bm]  [G.]  [D]\n"
   },
   {
     "slug": "queima-de-novo",
@@ -364,6 +452,17 @@ export const musicas = [
     ],
     "link": "",
     "cho": "{title: Regaço Acolhedor}\n{artist: Kelly Patrícia}\n{key: D}\n{categoria: Adoração}\n\n{c: Intro}\n[Bm7]  [Bm7(5+)]  [Bm7]\n[G7M]  [A9]  [Bm7]\n\n{c: Primeira Parte}\nÓ, minh'[G9]alma\nRet[A9]orna à tua [Bm7]paz\nComo cri[G9]ança bem tranqu[A9]ila\nNo regaço ac[D]olhed[A/C#]or de sua [Bm7]mãe\n\nÓ, minh'[G9]alma\nRet[A9]orna à tua [Bm]paz\nComo cri[G9]ança bem tranqu[A9]ila\nNo regaço ac[D]olhed[A/C#]or de sua [Bm7]mãe\n\n{c: Segunda Parte}\nMinha [G9]mãe  [A9]   é a Virgem Mar[D]ia\nÉ El[A/C#]a que ag[Bm7]ora [Bm7/A]vai\nMe acolh[G9]er, me abraç[A9]ar\nMe perdo[D]ar, me [A/C#]compreend[Bm7]er\n\nG9          A9         Bm7 (Riff 1)\nMe acalmar, me ensinar, me educar\nMe form[G9]ar, [A9]   me [Bm7]amar\n\nMinha [G9]mãe  [A9]   é a Virgem Mar[D]ia\nÉ El[A/C#]a que ag[Bm7]ora [Bm7/A]vai\nMe acolh[G9]er, me abraç[A9]ar\nMe perdo[D]ar, me [A/C#]compreend[Bm7]er\n\nMe acalm[G9]ar, me ensin[A9]ar, me educ[Bm7]ar   [Bm7/A]\nMe form[G9]ar, [A9]   me [Bm7]amar\n\nÓ, minh'[G9]alma\nRet[A9]orna à tua [Bm7]paz\n"
+  },
+  {
+    "slug": "romanos-12",
+    "titulo": "Romanos 12",
+    "artista": "Fraternidade São João Paulo II",
+    "tom": "E",
+    "categorias": [
+      "Entrega"
+    ],
+    "link": "",
+    "cho": "{title: Romanos 12}\n{artist: Fraternidade São João Paulo II}\n{key: E}\n{categoria: Entrega}\n\n{c: Intro}\n[A7M]  [F#m]  [C#m]  [B]\n[A7M]  [F#m]  [C#m]  [B]\n\n[A7M]    Não posso mais conter em [F#m]mim\nEsse desejo de [C#m]ti\nEstá crescendo [B]mais\n[A7M]    Não posso mais fingir que nã[F#m]o vi\nHá um incômodo em [C#m]mim\nQue não me deixa em [B]paz\n\n[A7M]     Não posso mais conter em [F#m]mim\nEsse desejo de [C#m]ti\nEstá crescendo [B]mais\n[A7M]    Não posso mais fingir que nã[F#m]o vi\nHá um incômodo em [C#m]mim\nQue não me deixa em [B]paz\n\n[A7M]Vem e traz pra fora\n[F#m]Tudo que há um tempo\n[C#m]Arde em mim\nO Amor que eu con[B]heci\n[A7M]Vem e me transforma\n[F#m]E me impulsiona\nA transfor[C#m]mar\nO mundo a partir de [B]mim\n\n{c: Refrão}\n[E9]    O teu Espírito me tira do conforto\n[A7M]    E me revela a tua vontade\n[F#m]Boa, perf[C#m]eita, agradável [B]\n[E9]    A tua obra em mim será conhecida\n[A7M]    A tua mão que faz nova criatura\nJá não [F#m]sou quem eu [C#m]era\nEu [B]sou novo em [A7M]ti      [F#m]     [C#m]     [B]\n\nO [A7M]primeiro dom O meu coração\nEn[F#m]trega de amor\n[C#m]Tudo o que sou Pela renovação\nDo [B]meu interior\n\n{c: Refrão}\n[E9]   O teu Espírito me tira do conforto\n[A7M]   E me revela a tua vontade\n[F#m]Boa, per[C#m]feita, agradá[B]vel\n[E9]   A tua obra em mim será conhecida\n[A7M]   A tua mão que faz nova criatura\nJá não [F#m]sou quem eu [C#m]era\nEu [B]sou novo em [A7M]ti   [F#m]\nNovo em [C#m]ti   [B]\nNovo em [A7M]ti   [F#m]\nNovo em [C#m]ti   [B]\n\n{c: Refrão}\n[E9]   O teu Espírito me tira do conforto\n[A7M]   E me revela a tua vontade\n[F#m]Boa, per[C#m]feita, agradá[B]vel\n[E9]   A tua obra em mim será conhecida\n[A7M]   A tua mão que faz nova criatura\nJá não [F#m]sou quem eu [C#m]era\nEu [B]sou novo em [A7M]ti   [F#m]    [C#m]    [B]   [A7M]\n"
   },
   {
     "slug": "sopra-em-nos",

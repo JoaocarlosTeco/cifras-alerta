@@ -1,6 +1,19 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { acharFicha, converterColado, separarColados } from '../scripts/colar.mjs';
+import { acharFicha, converterColado, separarColados, separarTituloArtista } from '../scripts/colar.mjs';
+
+test('separa o título do artista quando vêm grudados', () => {
+  assert.deepEqual(separarTituloArtista('Canção NovaGrupo Exemplo'), { titulo: 'Canção Nova', artista: 'Grupo Exemplo' });
+  assert.deepEqual(separarTituloArtista('Salmo 12Grupo Exemplo'), { titulo: 'Salmo 12', artista: 'Grupo Exemplo' });
+  assert.deepEqual(separarTituloArtista('Canção (part. Fulano Jr.)Grupo'), { titulo: 'Canção (part. Fulano Jr.)', artista: 'Grupo' });
+  assert.deepEqual(separarTituloArtista('Só o Título'), { titulo: 'Só o Título', artista: '' });
+});
+
+test('ignora o caractere invisível que vem na frente do nome das partes', () => {
+  const ficha = { titulo: 'Canção', artista: '', categorias: [], linhas: [] };
+  const { cho } = converterColado('Tom: G\n\n​[Intro] G  D\n\n​[Refrão]\n\nG      D\nLá lá lá\n', ficha, 'cancao');
+  assert.equal(cho, '{title: Canção}\n{key: G}\n\n{c: Intro}\n[G]  [D]\n\n{c: Refrão}\n[G]Lá lá [D]lá\n');
+});
 
 test('separa várias cifras coladas num arquivo só e acha a ficha de cada uma', () => {
   const texto = 'Canção UmGrupo A\n\nTom:  G\n\nG   D\nLá lá\n\nCanção UmOutra Cantora\n\nTom: A\n\nA\nLé lé\n';
