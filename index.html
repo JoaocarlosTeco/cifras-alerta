@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Cifras Alerta</title>
+    <meta name="description" content="Cifras do Alerta, da Paróquia São Pio X, para celular e computador." />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Cifras" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="img/icone.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/icone-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" crossorigin
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400..800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script>
+      // Aplica o tema salvo antes de desenhar a página (evita piscar).
+      try {
+        var tema = JSON.parse(localStorage.getItem('cifras:tema'));
+        var nomes = { branco: 'branco', preto: 'preto', claro: 'branco', escuro: 'preto' };
+        if (nomes[tema]) document.documentElement.dataset.tema = nomes[tema];
+      } catch (e) {}
+    </script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <!-- Logo do Alerta redesenhada em preto e branco. Usa a cor do texto de onde for colocada. -->
+    <svg class="so-definicoes" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="logo-alerta" viewBox="0 0 480 164">
+        <path class="logo-folha" d="M10 154C8 44 140 6 470 14c4 110-90 154-460 140z" />
+        <text class="logo-nome" x="119" y="88" textLength="160" lengthAdjust="spacing">ALER</text>
+        <path class="logo-tau" d="M286 40h52l-3 19-15-4 4 35h-24l4-35-15 4z" />
+        <text class="logo-nome" x="343" y="88" textLength="43.5" lengthAdjust="spacingAndGlyphs">A</text>
+        <text class="logo-lema" x="252" y="114" text-anchor="middle" textLength="190" lengthAdjust="spacingAndGlyphs">Aceita tua missão!</text>
+        <text class="logo-paroquia" x="250" y="135" text-anchor="middle" textLength="157" lengthAdjust="spacing">Paróquia São Pio X</text>
+      </symbol>
+      <symbol id="tau" viewBox="0 0 64 64">
+        <path d="M5 6h54l-3 20-16-4 4 38H20l4-38-16 4z" />
+      </symbol>
+    </svg>
+
+    <a class="pular" href="#cifra">Pular para a cifra</a>
+    <div class="app">
+      <aside class="painel-lista" id="painel-lista" aria-label="Músicas">
+        <header class="capa">
+          <svg class="capa-folha" viewBox="0 0 480 164" aria-hidden="true">
+            <path d="M10 154C8 44 140 6 470 14c4 110-90 154-460 140z" />
+          </svg>
+          <svg class="logo" viewBox="0 0 480 164" role="img" aria-label="Alerta: Aceita tua missão! Paróquia São Pio X">
+            <use href="#logo-alerta" />
+          </svg>
+          <button class="inverter" type="button" data-acao="inverter" aria-label="Inverter preto e branco" title="Inverter preto e branco">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path class="metade" d="M12 3a9 9 0 0 1 0 18z" /></svg>
+          </button>
+          <p class="capa-titulo">Cifras</p>
+          <p class="capa-sub" id="capa-sub"></p>
+        </header>
+
+        <div class="sentinela" id="sentinela" aria-hidden="true"></div>
+        <div class="procura" id="procura">
+          <div class="busca">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+            <input id="busca" type="search" placeholder="Nome ou trecho da letra"
+              autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"
+              aria-label="Buscar pelo nome ou por um trecho da letra" />
+            <button class="limpar-busca" id="limpar-busca" type="button" aria-label="Limpar busca" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+            </button>
+          </div>
+          <div class="categorias" id="categorias" role="group" aria-label="Categorias" hidden></div>
+        </div>
+
+        <div class="blocos" id="blocos" role="group" aria-label="Categorias"></div>
+        <p class="resumo" id="resumo" aria-live="polite"></p>
+        <div id="lista" class="lista"></div>
+        <footer class="rodape">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#tau" /></svg>
+          <span>Alerta, Paróquia São Pio X</span>
+        </footer>
+      </aside>
+
+      <main class="painel-musica" id="painel-musica">
+        <div class="boas-vindas" id="boas-vindas">
+          <svg class="logo" viewBox="0 0 480 164" aria-hidden="true"><use href="#logo-alerta" /></svg>
+          <h2>Escolha uma música</h2>
+          <p id="contagem"></p>
+          <dl class="atalhos">
+            <div><dt><kbd>/</kbd></dt><dd>buscar</dd></div>
+            <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>música anterior e próxima</dd></div>
+            <div><dt><kbd>[</kbd> <kbd>]</kbd></dt><dd>descer e subir o tom</dd></div>
+            <div><dt><kbd>-</kbd> <kbd>+</kbd></dt><dd>tamanho da letra</dd></div>
+            <div><dt><kbd>espaço</kbd></dt><dd>rolagem automática</dd></div>
+          </dl>
+        </div>
+
+        <article class="musica" id="musica" hidden>
+          <header class="barra-topo" id="barra-topo">
+            <a class="voltar" href="#/" aria-label="Voltar para a lista">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+              <span>Músicas</span>
+            </a>
+            <span class="barra-titulo" id="barra-titulo" aria-hidden="true"></span>
+          </header>
+
+          <div class="cabecalho">
+            <ul class="selos" id="selos"></ul>
+            <h1 id="titulo"></h1>
+            <p class="artista" id="artista" hidden></p>
+            <div class="tom-linha" id="tom-linha">
+              <span class="folha-tom" id="tom-folha"></span>
+              <span class="tom-texto" id="tom-atual"></span>
+            </div>
+          </div>
+
+          <div class="cifra" id="cifra" tabindex="-1"></div>
+
+          <nav class="vizinhas" id="vizinhas" aria-label="Outras músicas"></nav>
+        </article>
+
+        <div class="rolagem-velocidade" id="rolagem-velocidade" hidden>
+          <span>Velocidade</span>
+          <button type="button" data-acao="mais-devagar" aria-label="Mais devagar">−</button>
+          <output id="velocidade">3</output>
+          <button type="button" data-acao="mais-rapido" aria-label="Mais rápido">+</button>
+        </div>
+
+        <div class="controles" id="controles" role="toolbar" aria-label="Controles da cifra" hidden>
+          <div class="grupo" aria-label="Tom">
+            <button type="button" data-acao="tom-menos" aria-label="Descer meio tom" title="Descer meio tom ( [ )">
+              <span aria-hidden="true">−½</span>
+            </button>
+            <button type="button" class="tom" data-acao="tom-original" id="botao-tom"
+              aria-label="Tom atual. Toque para voltar ao original" title="Voltar ao tom original">
+              <small>Tom</small><b id="tom-botao"></b>
+            </button>
+            <button type="button" data-acao="tom-mais" aria-label="Subir meio tom" title="Subir meio tom ( ] )">
+              <span aria-hidden="true">+½</span>
+            </button>
+          </div>
+          <div class="grupo" aria-label="Tamanho da letra">
+            <button type="button" data-acao="letra-menor" aria-label="Letra menor" title="Letra menor ( - )">
+              <span aria-hidden="true" class="aa-menor">A</span>
+            </button>
+            <button type="button" data-acao="letra-maior" aria-label="Letra maior" title="Letra maior ( + )">
+              <span aria-hidden="true" class="aa-maior">A</span>
+            </button>
+          </div>
+          <button type="button" class="rolar" data-acao="rolar" id="botao-rolar" aria-pressed="false"
+            aria-label="Rolagem automática" title="Rolagem automática (espaço)">
+            <svg class="play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+            <svg class="pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" /></svg>
+          </button>
+          <button type="button" data-acao="mais" id="botao-mais" aria-haspopup="dialog" aria-expanded="false"
+            aria-controls="opcoes" aria-label="Mais opções" title="Mais opções">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" /><circle cx="16" cy="7" r="2" /><circle cx="8" cy="17" r="2" /></svg>
+          </button>
+        </div>
+
+        <div class="opcoes" id="opcoes" role="dialog" aria-label="Opções da cifra" hidden>
+          <div class="opcoes-cartao">
+            <div class="opcao">
+              <span>Mostrar acordes</span>
+              <button type="button" class="chave" role="switch" data-acao="acordes" id="chave-acordes" aria-checked="true"
+                aria-label="Mostrar acordes"></button>
+            </div>
+            <div class="opcao so-largo">
+              <span>Duas colunas</span>
+              <button type="button" class="chave" role="switch" data-acao="colunas" id="chave-colunas" aria-checked="false"
+                aria-label="Duas colunas"></button>
+            </div>
+            <div class="opcao">
+              <span>Acidentes ao transpor</span>
+              <div class="segmentado" role="radiogroup" aria-label="Acidentes ao transpor">
+                <button type="button" role="radio" data-acidente="sustenido">♯ sustenido</button>
+                <button type="button" role="radio" data-acidente="bemol">♭ bemol</button>
+              </div>
+            </div>
+            <div class="opcao">
+              <span>Tema</span>
+              <div class="segmentado" role="radiogroup" aria-label="Tema">
+                <button type="button" role="radio" data-tema="auto">Auto</button>
+                <button type="button" role="radio" data-tema="branco">Branco</button>
+                <button type="button" role="radio" data-tema="preto">Preto</button>
+              </div>
+            </div>
+            <button type="button" class="botao-largo" data-acao="compartilhar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5" /><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="19" r="2.5" /><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4" /></svg>
+              Compartilhar no tom atual
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "cifras-alerta",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cifras do Alerta (Paróquia São Pio X) para celular e computador.",
+  "type": "module",
+  "scripts": {
+    "servir": "node scripts/servidor.mjs",
+    "gerar": "node scripts/gerar.mjs",
+    "importar": "node scripts/importar-google-doc.mjs",
+    "colar": "node scripts/colar.mjs && node scripts/gerar.mjs",
+    "testar": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
