@@ -565,10 +565,11 @@ function desenharMusica() {
   const botaoTom = $('#botao-tom');
   $('#tom-botao').textContent = tomNovo || (semitons ? `${semitons > 0 ? '+' : '−'}${Math.abs(semitons)}` : '0');
   botaoTom.classList.toggle('mudou', semitons !== 0);
-  botaoTom.setAttribute(
-    'aria-label',
-    semitons ? `Tom ${tomNovo}, ${emTons(semitons)}. Toque para voltar ao tom original` : `Tom ${tomNovo || 'original'}`,
-  );
+  botaoTom.setAttribute('aria-label', semitons ? `Tom ${tomNovo}, ${emTons(semitons)}. Mudar o tom` : `Tom ${tomNovo || 'original'}. Mudar o tom`);
+  $('#tom-painel').textContent = tomNovo || (semitons ? emTons(semitons) : 'Original');
+  $('#tom-voltar').disabled = semitons === 0;
+  $('#tom-voltar').textContent = semitons === 0 ? 'Tom original' : `Voltar ao original${cifra.tom ? ` (${cifra.tom})` : ''}`;
+  $('#letra-painel').textContent = String(estado.tamanho);
 
   const semCifra = cifra.linhas.length === 0;
   $('#controles').hidden = semCifra;
@@ -600,7 +601,11 @@ let posicaoDaLista = 0;
 function abrirMusica(slug, { semitons, consulta } = {}) {
   const mudou = estado.atual !== slug;
   if (!estado.atual && !computador.matches) posicaoDaLista = window.scrollY;
-  if (mudou) pararRolagem();
+  if (mudou) {
+    pararRolagem();
+    fecharPaineis();
+    app.classList.remove('imersivo');
+  }
   estado.atual = slug;
   if (semitons !== undefined) pref.gravar(chaveTom(slug), ajustarSemitons(semitons));
 
@@ -619,11 +624,49 @@ function abrirMusica(slug, { semitons, consulta } = {}) {
     $(`.item[data-slug="${slug}"]`)?.scrollIntoView({ block: 'nearest' });
   }
   manterTelaLigada(true);
+  mostrarDicasNaPrimeiraVez();
+}
+
+// ---------- Barra: painéis de Tom e Letra, esconder com um toque, dicas ----------
+
+const PAINEIS = { tom: ['#painel-tom', '#botao-tom'], letra: ['#painel-letra', '#botao-letra'] };
+
+function fecharPaineis() {
+  for (const [painel, botao] of Object.values(PAINEIS)) {
+    $(painel).hidden = true;
+    $(botao).setAttribute('aria-expanded', 'false');
+  }
+}
+
+function alternarPainel(nome) {
+  const [painel, botao] = PAINEIS[nome];
+  const abrir = $(painel).hidden;
+  fecharPaineis();
+  if (!abrir) return;
+  pararRolagem(); // o painel abre no mesmo lugar do controle de velocidade
+  $(painel).hidden = false;
+  $(botao).setAttribute('aria-expanded', 'true');
+}
+
+const algumPainelAberto = () => Object.values(PAINEIS).some(([painel]) => !$(painel).hidden);
+
+function mostrarDicasNaPrimeiraVez() {
+  if (pref.ler('dicas-vistas', false) === true) return;
+  $('#dicas').hidden = false;
+  $('#dicas button')?.focus();
+}
+
+function fecharDicas() {
+  if ($('#dicas').hidden) return;
+  $('#dicas').hidden = true;
+  pref.gravar('dicas-vistas', true);
 }
 
 function fecharMusica() {
   pararRolagem();
   fecharOpcoes();
+  fecharPaineis();
+  app.classList.remove('imersivo');
   manterTelaLigada(false);
   const estava = estado.atual;
   estado.atual = null;
@@ -679,6 +722,7 @@ function mudarTamanho(passo) {
   estado.tamanho = limitar(estado.tamanho + passo, TAMANHO.min, TAMANHO.max);
   pref.gravar('tamanho', estado.tamanho);
   $('#cifra').style.setProperty('--tam', `${estado.tamanho}px`);
+  $('#letra-painel').textContent = String(estado.tamanho);
   acomodarAcordes();
 }
 
@@ -713,6 +757,7 @@ function passoDaRolagem(agora) {
 }
 
 function iniciarRolagem() {
+  fecharPaineis();
   estado.rolando = true;
   ultimoQuadro = null;
   sobra = 0;
@@ -880,6 +925,11 @@ document.addEventListener('click', (evento) => {
     return;
   }
 
+  if (alvo === $('#dicas')) {
+    fecharDicas();
+    return;
+  }
+
   const acidente = alvo.closest('[data-acidente]');
   if (acidente) {
     estado.acidente = acidente.dataset.acidente;
@@ -900,8 +950,24 @@ document.addEventListener('click', (evento) => {
   }
 
   const botao = alvo.closest('[data-acao]');
-  if (!botao) return;
+  if (!botao) {
+    // Toque na cifra (fora de links): fecha o painel aberto ou esconde/mostra a barra.
+    if (alvo.closest('#cifra') && !alvo.closest('a, button') && !computador.matches && !deslizou) {
+      if (algumPainelAberto()) fecharPaineis();
+      else app.classList.toggle('imersivo');
+    }
+    return;
+  }
   switch (botao.dataset.acao) {
+    case 'abrir-tom':
+      alternarPainel('tom');
+      break;
+    case 'abrir-letra':
+      alternarPainel('letra');
+      break;
+    case 'fechar-dicas':
+      fecharDicas();
+      break;
     case 'tom-menos':
       transpor(-1);
       break;
@@ -928,6 +994,7 @@ document.addEventListener('click', (evento) => {
       mudarVelocidade(1);
       break;
     case 'mais':
+      fecharPaineis();
       if ($('#opcoes').hidden) abrirOpcoes();
       else fecharOpcoes();
       break;
@@ -1000,7 +1067,9 @@ document.addEventListener('keydown', (evento) => {
   const digitando = evento.target.closest?.('input, textarea, [contenteditable="true"]');
 
   if (evento.key === 'Escape') {
-    if (!$('#opcoes').hidden) fecharOpcoes();
+    if (!$('#dicas').hidden) fecharDicas();
+    else if (!$('#opcoes').hidden) fecharOpcoes();
+    else if (algumPainelAberto()) fecharPaineis();
     else if (digitando && campoBusca.value) {
       limparBusca();
       desenharLista();
@@ -1067,6 +1136,37 @@ computador.addEventListener('change', () => {
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', pintarBarraDoNavegador);
 
 window.addEventListener('hashchange', lerRota);
+
+// ---------- Deslizar para o lado: música seguinte (para a esquerda) ou anterior (para a direita) ----------
+
+let toque = null;
+let deslizou = false; // evita que o fim do gesto conte como "toque na cifra"
+
+const painelMusica = $('#musica');
+painelMusica.addEventListener(
+  'touchstart',
+  (evento) => {
+    deslizou = false;
+    toque = evento.touches.length === 1 ? { x: evento.touches[0].clientX, y: evento.touches[0].clientY, t: Date.now() } : null;
+  },
+  { passive: true },
+);
+painelMusica.addEventListener(
+  'touchend',
+  (evento) => {
+    if (!toque || !estado.atual || !$('#opcoes').hidden || !$('#dicas').hidden) return;
+    const fim = evento.changedTouches[0];
+    const dx = fim.clientX - toque.x;
+    const dy = fim.clientY - toque.y;
+    const rapido = Date.now() - toque.t < 700;
+    toque = null;
+    // Só conta se for bem horizontal: rolar a cifra para baixo não troca de música.
+    if (!rapido || Math.abs(dx) < 80 || Math.abs(dx) < Math.abs(dy) * 2.5) return;
+    deslizou = true;
+    irParaVizinha(dx < 0 ? 1 : -1);
+  },
+  { passive: true },
+);
 
 // ---------- Início ----------
 

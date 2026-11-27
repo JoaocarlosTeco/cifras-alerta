@@ -128,35 +128,41 @@
         </div>
 
         <div class="controles" id="controles" role="toolbar" aria-label="Controles da cifra" hidden>
-          <div class="grupo" aria-label="Tom">
-            <button type="button" data-acao="tom-menos" aria-label="Descer meio tom" title="Descer meio tom ( [ )">
-              <span aria-hidden="true">−½</span>
-            </button>
-            <button type="button" class="tom" data-acao="tom-original" id="botao-tom"
-              aria-label="Tom atual. Toque para voltar ao original" title="Voltar ao tom original">
-              <small>Tom</small><b id="tom-botao"></b>
-            </button>
-            <button type="button" data-acao="tom-mais" aria-label="Subir meio tom" title="Subir meio tom ( ] )">
-              <span aria-hidden="true">+½</span>
-            </button>
-          </div>
-          <div class="grupo" aria-label="Tamanho da letra">
-            <button type="button" data-acao="letra-menor" aria-label="Letra menor" title="Letra menor ( - )">
-              <span aria-hidden="true" class="aa-menor">A</span>
-            </button>
-            <button type="button" data-acao="letra-maior" aria-label="Letra maior" title="Letra maior ( + )">
-              <span aria-hidden="true" class="aa-maior">A</span>
-            </button>
-          </div>
-          <button type="button" class="rolar" data-acao="rolar" id="botao-rolar" aria-pressed="false"
-            aria-label="Rolagem automática" title="Rolagem automática (espaço)">
+          <button type="button" class="doca-botao tom" data-acao="abrir-tom" id="botao-tom" aria-expanded="false"
+            aria-controls="painel-tom" title="Mudar o tom ( [ e ] )">
+            <b id="tom-botao"></b><small>Tom</small>
+          </button>
+          <button type="button" class="doca-botao" data-acao="abrir-letra" id="botao-letra" aria-expanded="false"
+            aria-controls="painel-letra" title="Tamanho da letra ( - e + )">
+            <span class="aa" aria-hidden="true">Aa</span><small>Letra</small>
+          </button>
+          <button type="button" class="doca-botao rolar" data-acao="rolar" id="botao-rolar" aria-pressed="false"
+            title="Rolagem automática (espaço)">
             <svg class="play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
             <svg class="pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" /></svg>
+            <small>Rolar</small>
           </button>
-          <button type="button" data-acao="mais" id="botao-mais" aria-haspopup="dialog" aria-expanded="false"
-            aria-controls="opcoes" aria-label="Mais opções" title="Mais opções">
+          <button type="button" class="doca-botao" data-acao="mais" id="botao-mais" aria-haspopup="dialog" aria-expanded="false"
+            aria-controls="opcoes" title="Mais opções">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" /><circle cx="16" cy="7" r="2" /><circle cx="8" cy="17" r="2" /></svg>
+            <small>Mais</small>
           </button>
+        </div>
+
+        <!-- Painéis que abrem em cima da barra ao tocar em Tom ou Letra. -->
+        <div class="painel-rapido" id="painel-tom" role="group" aria-label="Mudar o tom" hidden>
+          <button type="button" data-acao="tom-menos"><b aria-hidden="true">−½</b><small>Descer</small></button>
+          <div class="painel-meio">
+            <b id="tom-painel"></b>
+            <button type="button" class="painel-link" data-acao="tom-original" id="tom-voltar">Voltar ao original</button>
+          </div>
+          <button type="button" data-acao="tom-mais"><b aria-hidden="true">+½</b><small>Subir</small></button>
+        </div>
+
+        <div class="painel-rapido" id="painel-letra" role="group" aria-label="Tamanho da letra" hidden>
+          <button type="button" data-acao="letra-menor"><b class="aa-menor" aria-hidden="true">A</b><small>Menor</small></button>
+          <div class="painel-meio"><b id="letra-painel"></b><span class="painel-nota">tamanho da letra</span></div>
+          <button type="button" data-acao="letra-maior"><b class="aa-maior" aria-hidden="true">A</b><small>Maior</small></button>
         </div>
 
         <div class="opcoes" id="opcoes" role="dialog" aria-label="Opções da cifra" hidden>
@@ -194,6 +200,21 @@
         </div>
       </main>
     </div>
+    <!-- Aparece só na primeira vez que alguém abre uma música. -->
+    <div class="opcoes dicas" id="dicas" role="dialog" aria-label="Como usar" hidden>
+      <div class="opcoes-cartao">
+        <h2>Como usar</h2>
+        <ul class="dicas-lista">
+          <li><b>Tom</b><span>muda o tom da música inteira</span></li>
+          <li><b>Letra</b><span>aumenta ou diminui o tamanho</span></li>
+          <li><b>Rolar</b><span>a cifra desce sozinha enquanto você toca</span></li>
+          <li><b>Toque na cifra</b><span>esconde os botões e mostra de novo</span></li>
+          <li><b>Deslize para o lado</b><span>vai para a música seguinte ou volta</span></li>
+        </ul>
+        <button type="button" class="botao-largo" data-acao="fechar-dicas">Entendi</button>
+      </div>
+    </div>
+
     <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
   </body>
 </html>

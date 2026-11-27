@@ -1242,10 +1242,11 @@ kbd {
   text-align: right;
 }
 
-/* ---------- Controles: pílula invertida (preta no claro, branca no escuro) ---------- */
+/* ---------- Controles: barra invertida (preta no tema branco, branca no preto) ---------- */
 
 .controles,
-.rolagem-velocidade {
+.rolagem-velocidade,
+.painel-rapido {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -1256,126 +1257,93 @@ kbd {
   color: var(--fundo);
   box-shadow: 0 0 0 4px var(--fundo), 0 14px 34px rgba(0, 0, 0, 0.28);
   font-family: var(--fonte-titulo);
-}
-
-.controles {
-  bottom: calc(14px + env(safe-area-inset-bottom));
-  gap: 4px;
-  max-width: calc(100vw - 20px);
-  padding: 6px;
-  border-radius: 24px;
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
 @media (min-width: 960px) {
   .controles,
-  .rolagem-velocidade {
+  .rolagem-velocidade,
+  .painel-rapido {
     left: calc(var(--lista) + (100vw - var(--lista)) / 2);
   }
 }
 
-.controles button,
-.rolagem-velocidade button {
-  display: grid;
-  place-items: center;
-  min-width: 46px;
-  height: 50px;
-  padding: 0 8px;
+/* Quatro botões grandes, cada um com o nome embaixo. */
+.controles {
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  gap: 4px;
+  width: min(420px, calc(100vw - 24px));
+  padding: 6px;
+  border-radius: 26px;
+}
+
+.doca-botao {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+  height: 62px;
+  padding: 0 4px;
   border: 0;
-  border-radius: 18px;
+  border-radius: 20px;
   background: transparent;
   color: inherit;
-  font-size: 17px;
-  font-weight: 700;
-  font-stretch: 88%;
 }
 
-/* Celulares estreitos: os botões encolhem para a pílula caber. */
-@media (max-width: 380px) {
-  .controles button {
-    min-width: 42px;
-    padding: 0 6px;
-  }
-
-  .controles .tom {
-    min-width: 48px;
-  }
+.doca-botao small,
+.painel-rapido small {
+  font-family: var(--fonte);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  opacity: 0.78;
 }
 
-@media (max-width: 340px) {
-  .controles button {
-    min-width: 38px;
-    padding: 0 4px;
-  }
-
-  .controles .tom {
-    min-width: 44px;
-  }
+.doca-botao b,
+.doca-botao .aa {
+  font-size: 23px;
+  font-weight: 800;
+  font-stretch: 80%;
+  line-height: 1;
 }
 
-.controles :focus-visible,
-.rolagem-velocidade :focus-visible {
-  outline-color: var(--fundo);
-  outline-offset: -3px;
-}
-
-@media (hover: hover) {
-  .controles button:hover,
-  .rolagem-velocidade button:hover {
-    background: color-mix(in srgb, var(--fundo) 18%, transparent);
-  }
-}
-
-.controles button:active,
-.rolagem-velocidade button:active {
-  transform: scale(0.94);
-}
-
-.controles svg {
+.doca-botao svg {
   width: 23px;
   height: 23px;
 }
 
-.controles .grupo {
-  display: flex;
-  align-items: center;
-  border-radius: 18px;
-  background: color-mix(in srgb, var(--fundo) 14%, transparent);
-}
-
-.controles .tom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1px;
-  min-width: 54px;
-  line-height: 1;
-}
-
-.controles .tom small {
-  font-family: var(--fonte);
-  font-size: 10.5px;
-  font-weight: 600;
-  opacity: 0.66;
-}
-
-.controles .tom b {
-  font-size: 21px;
-  font-weight: 800;
-  font-stretch: 80%;
-}
-
-.controles .tom.mudou b {
+.doca-botao.tom.mudou b {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 
-.aa-menor {
-  font-size: 14px;
+.doca-botao[aria-expanded='true'] {
+  background: color-mix(in srgb, var(--fundo) 20%, transparent);
 }
 
-.aa-maior {
-  font-size: 23px;
+.controles :focus-visible,
+.rolagem-velocidade :focus-visible,
+.painel-rapido :focus-visible {
+  outline-color: var(--fundo);
+  outline-offset: -3px;
+}
+
+@media (hover: hover) {
+  .doca-botao:hover,
+  .rolagem-velocidade button:hover,
+  .painel-rapido > button:hover {
+    background: color-mix(in srgb, var(--fundo) 20%, transparent);
+  }
+}
+
+.doca-botao:active,
+.rolagem-velocidade button:active,
+.painel-rapido > button:active {
+  transform: scale(0.95);
 }
 
 .rolar .pause,
@@ -1398,8 +1366,88 @@ kbd {
   stroke: none;
 }
 
+/* Painéis de Tom e Letra e a velocidade da rolagem: abrem logo acima da barra. */
+.rolagem-velocidade,
+.painel-rapido {
+  bottom: calc(98px + env(safe-area-inset-bottom));
+}
+
+.painel-rapido {
+  gap: 6px;
+  width: min(420px, calc(100vw - 24px));
+  padding: 6px;
+  border-radius: 24px;
+}
+
+.painel-rapido > button {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 88px;
+  height: 68px;
+  border: 0;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--fundo) 14%, transparent);
+  color: inherit;
+}
+
+.painel-rapido > button b {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.painel-rapido > button b.aa-menor {
+  font-size: 17px;
+}
+
+.painel-rapido > button b.aa-maior {
+  font-size: 29px;
+}
+
+.painel-meio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+}
+
+.painel-meio > b {
+  font-size: 30px;
+  font-weight: 800;
+  font-stretch: 80%;
+  line-height: 1;
+}
+
+.painel-link {
+  padding: 5px 8px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: var(--fonte);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.painel-link:disabled {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.painel-nota {
+  font-family: var(--fonte);
+  font-size: 12.5px;
+  opacity: 0.75;
+}
+
 .rolagem-velocidade {
-  bottom: calc(88px + env(safe-area-inset-bottom));
   gap: 2px;
   padding: 4px 4px 4px 16px;
   border-radius: 18px;
@@ -1408,10 +1456,16 @@ kbd {
 }
 
 .rolagem-velocidade button {
-  min-width: 42px;
-  height: 40px;
+  display: grid;
+  place-items: center;
+  min-width: 46px;
+  height: 44px;
+  border: 0;
   border-radius: 14px;
-  font-size: 22px;
+  background: transparent;
+  color: inherit;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .rolagem-velocidade output {
@@ -1421,6 +1475,101 @@ kbd {
   font-weight: 800;
   text-align: center;
   font-variant-numeric: tabular-nums;
+}
+
+/* Um toque na cifra esconde a barra e o topo: sobra a tela inteira para a música. */
+.barra-topo {
+  transition: transform 0.22s ease, opacity 0.22s ease, border-color 0.2s;
+}
+
+.app.imersivo .controles,
+.app.imersivo .rolagem-velocidade,
+.app.imersivo .painel-rapido {
+  transform: translate(-50%, 180%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app.imersivo .barra-topo {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* No celular a capa é baixa: a busca e as músicas aparecem logo de cara. */
+@media (max-width: 959px) {
+  .capa {
+    padding: max(14px, env(safe-area-inset-top)) 18px 50px;
+    border-bottom-left-radius: 34px;
+  }
+
+  .capa .logo {
+    width: 148px;
+  }
+
+  .capa-titulo {
+    margin-top: 12px;
+    font-size: 60px;
+  }
+
+  .capa-sub {
+    display: none;
+  }
+
+  .capa-folha {
+    right: -150px;
+    bottom: -56px;
+    width: 400px;
+  }
+
+  .inverter {
+    top: max(14px, env(safe-area-inset-top));
+    right: 14px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Dicas da primeira vez. */
+.dicas {
+  z-index: 45;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+.dicas h2 {
+  margin: 16px 0 4px;
+  font-family: var(--fonte-titulo);
+  font-size: 32px;
+  font-weight: 800;
+  font-stretch: 75%;
+  line-height: 1;
+}
+
+.dicas-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dicas-lista li {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--cinza-2);
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.dicas-lista b {
+  font-family: var(--fonte-titulo);
+  font-size: 17px;
+  font-stretch: 86%;
+}
+
+.dicas-lista span {
+  color: var(--cinza-3);
 }
 
 /* ---------- Opções (folha de baixo no celular) ---------- */
@@ -1433,7 +1582,7 @@ kbd {
   align-items: flex-end;
   justify-content: center;
   padding: 12px;
-  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  padding-bottom: calc(102px + env(safe-area-inset-bottom));
   background: color-mix(in srgb, var(--fundo) 72%, transparent);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
@@ -1566,7 +1715,7 @@ kbd {
 .aviso {
   position: fixed;
   left: 50%;
-  bottom: calc(96px + env(safe-area-inset-bottom));
+  bottom: calc(108px + env(safe-area-inset-bottom));
   z-index: 40;
   transform: translate(-50%, 20px);
   padding: 11px 18px;
